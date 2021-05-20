@@ -32,13 +32,13 @@ const Home = () => {
 
   return (
     <>
-      {!searchTerm && !isFetching ? (
+      {!searchTerm && !isFetching && (
         <HeroImage
           title={data.pages[0].results[0].original_title}
           text={data.pages[0].results[0].overview}
           image={IMAGE_BASE_URL + BACKDROP_SIZE + data.pages[0].results[0].backdrop_path}
         />
-      ) : null}
+      )}
       <SearchBar setSearchTerm={setSearchTerm} />
       <Grid header={searchTerm ? "Search Result" : "Popular Movies"}>
         {data &&
