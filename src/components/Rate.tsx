@@ -1,7 +1,7 @@
 import React from "react";
 
 type Props = {
-  callback: (value: any) => void;
+  callback: (value: number) => void;
 };
 
 const Rate: React.FC<Props> = ({ callback }) => {
